@@ -1,1 +1,10 @@
 // Specific CSS for your home-page
+.container {
+  clear: both;
+  display: grid;
+  align-items: center;
+
+  input {
+    margin: 1em;
+  }
+}
