@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+body{
+  background-image: url("google_map.png");
+}
+
+img {
+  justify-self: center;
+}
+
+.container {
+  clear: both;
+  display: grid;
+  align-items: center;
+  text-align: center;
+
+  input {
+    margin: 1em;
+  }
+
+  select {
+    margin: 1em;
+  }
+
+  button {
+    margin: 1em;
+    background-color: rgb(243, 113, 33);
+
+  }
+}
