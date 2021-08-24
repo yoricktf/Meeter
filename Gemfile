@@ -28,6 +28,7 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+# Google Places
 gem 'google_places', '~> 0.32.0'
 
 gem 'devise'
