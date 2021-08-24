@@ -33,7 +33,7 @@ gem 'google_places', '~> 0.32.0'
 
 
 gem 'devise'
-gem 'httparty'
+gem 'httparty', '~> 0.13.1'
 
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
