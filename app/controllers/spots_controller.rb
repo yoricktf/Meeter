@@ -18,7 +18,10 @@ class SpotsController < ApplicationController
 
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
 
-    @spots = @client.spots(@centre_point_lat, @centre_point_lon)
+    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
+
+    # @spot_type.first(params[:spot_type])
+
 
 
   end
