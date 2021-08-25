@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'google_places', '~> 0.32.0'
 gem 'geocoder'
 gem 'geokit'
+gem 'geokit-rails'
 
 
 
