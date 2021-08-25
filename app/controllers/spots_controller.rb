@@ -21,7 +21,7 @@ class SpotsController < ApplicationController
     @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
 
     # @spot_type.first(params[:spot_type])
-
+    raise
 
 
   end
