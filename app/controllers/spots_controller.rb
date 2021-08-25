@@ -13,5 +13,13 @@ class SpotsController < ApplicationController
 
     @centre_point = Geocoder::Calculations.geographic_center([@first_address_coordinates, @second_address_coordinates])
 
+    @centre_point_lat = @centre_point.first
+    @centre_point_lon = @centre_point.second
+
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
+
+    @spots = @client.spots(@centre_point_lat, @centre_point_lon)
+
+
   end
 end
