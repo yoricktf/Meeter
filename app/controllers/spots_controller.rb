@@ -22,4 +22,5 @@ class SpotsController < ApplicationController
 
 
   end
+
 end
