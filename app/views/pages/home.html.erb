@@ -1,21 +1,22 @@
 <div class="container">
 
-<%= image_tag 'logo' %>
+<%= image_tag 'logo.png' %>
 
 <h1>MEET UP YOUR FRIENDS WITHOUT GOING A METER TO FAR</h1>
 
-<form action="/results"></form>
-<input type="text" placeholder="your location">
-<input type="text" placeholder="your friend's location">
-<select multiple size="5">
-          <option value="Park">Park</option>
-          <option value="Bar">Bar </option>
-          <option value="Cafe">Cafe </option>
-          <option value="Club">Club </option>
-          <option value="Restaurant">Restaurant </option>
-</select>
-<button type="submit">LET'S GO!!!</button>
+<form action="/spots" method="get">
+  <input type="text" name="firstlocation" placeholder="your location">
+  <input type="text" name="secondlocation"placeholder="your friend's location">
+  <select multiple size="5">
+            <option value="Park">Park</option>
+            <option value="Bar">Bar </option>
+            <option value="Cafe">Cafe </option>
+            <option value="Club">Club </option>
+            <option value="Restaurant">Restaurant </option>
+  </select>
+  <button type="submit">LET'S GO!!!</button>
+</form>
 
-<%= image_tag 'logo.png' %>
+
 
 </div>
