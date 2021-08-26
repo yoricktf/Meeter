@@ -1,5 +1,6 @@
+
+
 <div id="map"
-     style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
@@ -8,3 +9,7 @@
   <li><%= spot.name %> </li>
   <% end %>
 </ul>
+
+
+
+<%=link_to "share", share_spots_path(url:request.url), :class => "my-button"%>
