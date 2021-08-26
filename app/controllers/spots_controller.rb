@@ -35,9 +35,19 @@ class SpotsController < ApplicationController
     second_address
     center_point
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
-    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
+    marked_results
     marker(@spots)
   end
+
+  def result
+    # we cannot use show, we had to call it differently
+    @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
+    @result = @client.spot(params[:place_id])
+    @url = @result.photos[0].fetch_url(400)
+  end
+
+
+  private 
 
   def first_address
     @first_address = params[:first_address]
@@ -57,6 +67,10 @@ class SpotsController < ApplicationController
     @centre_point_lon = @centre_point.second
   end
 
+  def marked_results
+    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
+  end
+
   def marker(spots)
     @markers = spots.map do |spot|
       {
@@ -65,11 +79,5 @@ class SpotsController < ApplicationController
       }
     end
   end
-
-
-  def show
-    @spot = Spot.find(params[:first_address, :second_address])
-  end
-
 
 end
