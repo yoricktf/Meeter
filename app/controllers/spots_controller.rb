@@ -44,6 +44,7 @@ class SpotsController < ApplicationController
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
     @result = @client.spot(params[:place_id])
     @url = @result.photos[0].fetch_url(800)
+    # @spot = @client.spot(@centre_point_lat, @centre_point_lon, :types => 'restaurant') TRYING TO SHOW THE MARKER ON THE MAP
   end
 
 
