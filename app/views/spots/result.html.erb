@@ -1,17 +1,30 @@
 <img src="<%= @url %>" alt="spot photo"> 
 
 
-<div> <%= @result.name %> 
+<div> 
+<strong><%= @result.name %></strong>
+<br>
 </div>
 
-<div> <%= @result.formatted_address %> 
+<div> 
+ <p>Address: <%= @result.formatted_address %> </p>
 </div>
 
-<div> <%= @result.rating %> 
+<div> 
+  <p>Rating: <%= @result.rating %>/5 </p>
 </div>
 
-<div> <%= @result.international_phone_number %> 
+<div>
+  <p>Telephone: <%= @result.international_phone_number %> </p>
 </div>
 
-<div> <%= @result.website %> 
+<div> 
+   <p>Website: <%= @result.website %> </p>
+</div>
+
+
+<div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

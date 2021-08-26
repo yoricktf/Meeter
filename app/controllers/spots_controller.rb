@@ -43,7 +43,7 @@ class SpotsController < ApplicationController
     # we cannot use show, we had to call it differently
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
     @result = @client.spot(params[:place_id])
-    @url = @result.photos[0].fetch_url(400)
+    @url = @result.photos[0].fetch_url(800)
   end
 
 
