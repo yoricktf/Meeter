@@ -5,12 +5,15 @@ class SpotsController < ApplicationController
     if params[:first_address].present? && params[:second_address].present?
       @first_address = params[:first_address]
       @second_address = params[:second_address]
+      @spot_type = params[:spot_type]
 
       @first_address = Geocoder.search(params[:first_address])
       @first_address_coordinates = @first_address.first.coordinates
 
       @second_address = Geocoder.search(params[:second_address])
       @second_address_coordinates = @second_address.first.coordinates
+
+      @spot_type = Geocoder.search(params[:spot_type])
 
       @centre_point = Geocoder::Calculations.geographic_center([@first_address_coordinates, @second_address_coordinates])
 
@@ -19,19 +22,9 @@ class SpotsController < ApplicationController
 
       @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
 
-<<<<<<< HEAD
-    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
-
-    # @spot_type.first(params[:spot_type])
-    raise
-=======
-      @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
-      # @spot_type.first(params[:spot_type])
-
-      # @spots = [{Geocoder.coordinates("25 Main St, Cooperstown, NY"),
-      # Geocoder.coordinates("25 Main St, Cooperstown, NY")}]
->>>>>>> 62648bb70ecf9181cb00266483013895b8e2faa6
-
+      @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => ['park'], exclude:'cafe')
+      # @spots += @client.spots(@centre_point_lat, @centre_point_lon, :types => ['night_club'])
+      @spots = @spots.take(3)
 
       @markers = @spots.map do |spot|
         {
