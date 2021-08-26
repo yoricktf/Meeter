@@ -34,4 +34,9 @@ class SpotsController < ApplicationController
       end
     end
   end
+
+  def show
+    @spot = Spot.find(params[:first_address, :second_address])
+  end
+
 end
