@@ -48,7 +48,7 @@ class SpotsController < ApplicationController
   end
 
 
-  private 
+  private
 
   def first_address
     @first_address = params[:first_address]
@@ -70,6 +70,7 @@ class SpotsController < ApplicationController
 
   def marked_results
     @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => "#{params[:spot_type]}")
+    @spots = @spots.take(3)
   end
 
   def marker(spots)

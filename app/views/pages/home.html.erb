@@ -1,20 +1,47 @@
-<div class="container">
+<div class="homepage-container">
+  <div class="map-image"
+    <%= image_tag 'google_map.png' %>>
+  </div>
 
-<%= image_tag 'logo.png' %>
+  <div class="meeter-header">
 
-<h1>MEET UP YOUR FRIENDS WITHOUT GOING A METER TO FAR</h1>
+    <div class="meeter-logo">
+      <%= image_tag 'logo.png' %>
+    </div>
 
-<form action="/spots" method="get">
-  <input type="text" name="first_address" placeholder="your location">
-  <input type="text" name="second_address"placeholder="your friend's location">
-  <select name="spot_type" multiple size="5">
+    <div class="meeter-tagline">
+      <h1>MEET UP YOUR FRIENDS WITHOUT GOING A METER TO FAR</h1>
+    </div>
+
+  </div>
+
+  <div class="homepage-input-fields-and-search-button">
+    <form action="/spots" method="get">
+
+      <div class="addresses">
+        <div class="address1">
+          <input required="true" type="text" name="first_address" placeholder="your location">
+        </div>
+        <div class="address2">
+          <input required="true" type="text" name="second_address"placeholder="your friend's location">
+        </div>
+      </div>
+
+      <div class="spot-type-form">
+        <select name="spot_type" multiple size="5">
             <option value="park">Park</option>
             <option value="bar">Bar </option>
             <option value="cafe">Cafe </option>
             <option value="night_club">Club </option>
             <option value="restaurant">Restaurant </option>
-  </select>
-  <button type="submit">LET'S GO!!!</button>
-</form>
+        </select>
+      </div>
+
+      <div class="search-button">
+        <button type="submit">LET'S GO!!!</button>
+      </div>
+
+    </form>
+  </div>
 
 </div>
