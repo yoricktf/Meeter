@@ -22,8 +22,14 @@ img {
   }
 
   button {
-    margin: 1em;
-    background-color: rgb(243, 113, 33);
-
+   margin: 1em;
+   background-color: rgb(243, 113, 33);
+   text-decoration-color: white;
+   color: white;
+   border-radius: 5px;
+   font-weight: 700;
+   border: none;
+   padding: 1em;
+   margin: 0.5em;
   }
 }

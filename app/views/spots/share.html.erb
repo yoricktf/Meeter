@@ -1,0 +1,20 @@
+<%= image_tag 'logo.png' %>
+
+<a href="<%=params[:url]%>">Hi we share</a>
+
+
+
+
+
+
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Share your options</h5>
+    <a href="whatsapp://send?text=<%= params[:url] %>"><i class="fab fa-whatsapp"></i></a>
+    <a href=https://t.me/share/url?url=<%= params[:url] %>&text=Check this places"><i class="fab fa-telegram"></i></a>
+    <p class="card-text">here should be the icons</p>
+    <p ><%=params[:url]%></p>
+  </div>
+</div>
