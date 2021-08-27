@@ -20,6 +20,8 @@
 
   <br>
   <br>
-  <%= link_to "Back", spots_path(url:request.url), :class => "my-button" %>
-  <%= link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+
+  <a href="<%=params[:url] %>" class="my-button" >Back</a>
+  <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+
 </div>
