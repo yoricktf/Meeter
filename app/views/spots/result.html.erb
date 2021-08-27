@@ -1,26 +1,14 @@
-<div class="container">
-  <img src="<%= @url %>" alt="spot photo"> 
-
-
-  <div> 
-  <h1><strong><%= @result.name %></strong></h1>
+<div class="container" style='width: 100%; padding: 0;'>
+  <img src="<%= @url %>" alt="spot photo" style='width: 100%;'> 
   <br>
-  </div>
 
-  <div> 
-  <p>Address: <%= @result.formatted_address %> </p>
-  </div>
-
-  <div> 
-  <p>Rating: <%= @result.rating %>/5 </p>
-  </div>
-
-  <div>
-  <p>Telephone: <%= @result.international_phone_number %> </p>
-  </div>
-
-  <div> 
-  <p>Website: <%= @result.website %> </p>
+  <div class="result-info"> 
+    <h1><strong><%= @result.name %></strong></h1>
+    <br>
+    <p>Address: <%= @result.formatted_address %> </p>
+    <p>Rating: <%= @result.rating %>/5 </p>
+    <p>Telephone: <%= @result.international_phone_number %> </p>  
+    <p>Website: <%= @result.website %> </p>
   </div>
 
 
@@ -32,6 +20,8 @@
 
   <br>
   <br>
+
   <a href="<%=params[:url] %>" class="my-button" >Back</a>
   <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+
 </div>
