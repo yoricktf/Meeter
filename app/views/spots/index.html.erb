@@ -6,7 +6,7 @@
 </div>
 
 <ul><% @spots.each do |spot| %>
-  <li><%= link_to spot.name, result_path(place_id: spot.place_id) %> </li>
+  <li><%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url) %> </li>
   <% end %>
 </ul>
 
