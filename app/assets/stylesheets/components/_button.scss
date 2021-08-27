@@ -10,6 +10,13 @@
     margin: 0.5em;
   }
 
+.mapboxgl-ctrl-geocoder--button {
+  display: none;
+}
+
+.button-fullwidth {
+  width: 100% !important;
+}
   .fab {
     font-size: 3rem;
     padding: 0.1em;

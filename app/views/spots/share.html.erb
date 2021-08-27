@@ -7,7 +7,7 @@
       <h5 class="card-title">Share your options</h5>
       <a href="whatsapp://send?text=<%= params[:url] %>"><i class="fab fa-whatsapp"></i></a>
       <a href=https://t.me/share/url?url=<%= params[:url] %>&text=Check this places"><i class="fab fa-telegram"></i></a>
-      <a href="mailto:?subject=Check all this spots&amp;body=Check out this site <%= params[:url] %>"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:?subject=Check all this spots&amp;body=Check out these spots <%= params[:url] %>"><i class="fas fa-envelope"></i></a>
       <div class="card-copy">
       <p id="share-link"><%=params[:url]%></p>
       <p><i class="far fa-copy"></i></p>
