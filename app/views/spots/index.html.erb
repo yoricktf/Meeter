@@ -6,10 +6,11 @@
 </div>
 
 <ul><% @spots.each do |spot| %>
-  <li><%= spot.name %> </li>
+  <li><%= link_to spot.name, result_path(place_id: spot.place_id) %> </li>
   <% end %>
 </ul>
 
 
 
 <%=link_to "share", share_spots_path(url:request.url), :class => "my-button"%>
+
