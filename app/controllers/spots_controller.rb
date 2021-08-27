@@ -48,7 +48,7 @@ class SpotsController < ApplicationController
   end
 
 
-  private 
+  private
 
   def first_address
     @first_address = params[:first_address]
