@@ -69,7 +69,7 @@ class SpotsController < ApplicationController
   end
 
   def marked_results
-    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
+    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => "#{params[:spot_type]}")
   end
 
   def marker(spots)
