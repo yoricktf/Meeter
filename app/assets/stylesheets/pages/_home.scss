@@ -1,12 +1,3 @@
-// Specific CSS for your home-page
-// body{
-//   background-image: url("google_map.png");
-// }
-
-img {
-  justify-self: center;
-}
-
 .homepage-container {
   clear: both;
   display: grid;
@@ -21,18 +12,6 @@ img {
 
     select {
       margin: 1em;
-    }
-
-    button {
-    margin: 1em;
-    background-color: rgb(243, 113, 33);
-    text-decoration-color: white;
-    color: white;
-    border-radius: 5px;
-    font-weight: 700;
-    border: none;
-    padding: 1em;
-    margin: 0.5em;
     }
 }
 
