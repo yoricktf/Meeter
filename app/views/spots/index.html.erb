@@ -5,12 +5,12 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<ul><% @spots.each do |spot| %>
-  <li><%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url) %> </li>
-  <% end %>
-</ul>
 
+<% @spots.each do |spot| %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= spot.photos.any? ? spot.photos[0].fetch_url(500) : "https://picsum.photos/id/1060/600/900" %>)">
+    <%= link_to spot.name, result_path(place_id: spot.place_id) %>
+  </div>
+<% end %>
 
 
 <%=link_to "share", share_spots_path(url:request.url), :class => "my-button"%>
-
