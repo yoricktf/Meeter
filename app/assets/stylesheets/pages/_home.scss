@@ -1,24 +1,20 @@
-// Specific CSS for your home-page
-// body{
-//   background-image: url("google_map.png");
-// }
-
-img {
-  justify-self: center;
-}
-
-.container {
+.homepage-container {
   clear: both;
   display: grid;
   align-items: center;
   text-align: center;
+  background-image: url("google_map.png");
+  background-repeat: no-repeat;
 
-  input {
-    margin: 1em;
-  }
+    input {
+      margin: 1em;
+    }
 
-  select {
-    margin: 1em;
-  }
+    select {
+      margin: 1em;
+    }
+}
 
+.meeter-tagline {
+  color: rgb(86, 80, 80);
 }
