@@ -3,3 +3,26 @@ i {
   color: #F37121;
 }
 
+.container {
+  width: 100%; 
+  padding: 0;
+}
+
+.container img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+#map {
+  width: 100%; 
+  height: 100px;
+}
+
+.result-info {
+  margin: 20px;
+}
+
+.page-buttons {
+  margin: 20px;
+}
