@@ -101,10 +101,6 @@ GEM
     font-awesome-sass (5.15.1)
       sassc (>= 1.11)
     geocoder (1.6.7)
-    geokit (1.13.1)
-    geokit-rails (2.3.2)
-      geokit (~> 1.5)
-      rails (>= 3.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
     google_places (0.32.0)
@@ -223,6 +219,8 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    swiper-rails (1.0.4)
+      rails (>= 3.1)
     thor (1.1.0)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -267,8 +265,6 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass
   geocoder
-  geokit
-  geokit-rails
   google_places (~> 0.32.0)
   httparty (~> 0.13.1)
   jbuilder (~> 2.7)
@@ -286,6 +282,7 @@ DEPENDENCIES
   social-share-button
   spring
   spring-watcher-listen (~> 2.0.0)
+  swiper-rails
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
