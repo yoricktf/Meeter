@@ -6,6 +6,26 @@
 
   <div class="result-info"> 
     <h1><strong><%= @result.name %></strong> <i class="fa-li fa fa-star"></i> <%= @result.rating %>/5 </h1>
+        <div class="rating large star-icon direction-rtl value-1 half color-default label-top">
+          <div class="label-value">1.5</div>
+            <div class="star-container">
+                <div class="star">
+                    <i class="star-empty"></i>
+                    <i class="star-half"></i>
+                    <i class="star-filled"></i>
+                </div>
+                <div class="star">
+                    <i class="star-empty"></i>
+                    <i class="star-half"></i>
+                    <i class="star-filled"></i>
+                </div>
+                <div class="star">
+                    <i class="star-empty"></i>
+                    <i class="star-half"></i>
+                    <i class="star-filled"></i>
+                </div>
+            </div>
+        </div>
     <h2> <i class="fa-li fa fa-map-marker-alt"></i> <%= @result.formatted_address %> </h2>
 
       <ul class="fa-ul">
@@ -23,7 +43,7 @@
   </div>
 
   <div class="page-buttons">
-    <a href="<%=params[:url] %>" class="my-button" >Back</a>
+    <a href="<%=params[:url] %>" class="my-button" id="back-button" >Back</a>
     <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
   </div>
 
