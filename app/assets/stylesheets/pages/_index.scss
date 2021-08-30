@@ -36,3 +36,23 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-decoration: none;
 }
+
+.scrolling-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  width: 100vw;
+  .horizontal-card {
+    flex: 0 0 auto;
+    width: 80vw;
+    margin-left: 6px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+  }
+}
