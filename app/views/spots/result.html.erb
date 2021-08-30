@@ -1,31 +1,16 @@
-<div class="container">
+<div>
+  <img class='img-show' src="<%= @url %>" alt="spot photo"> 
+</div>
+<div class="main-container">
   
-  <div>
-    <img src="<%= @url %>" alt="spot photo"> 
-  </div>
 
   <div class="result-info"> 
-    <h1><strong><%= @result.name %></strong> <i class="fa-li fa fa-star"></i> <%= @result.rating %>/5 </h1>
-        <div class="rating large star-icon direction-rtl value-1 half color-default label-top">
-          <div class="label-value">1.5</div>
-            <div class="star-container">
-                <div class="star">
-                    <i class="star-empty"></i>
-                    <i class="star-half"></i>
-                    <i class="star-filled"></i>
-                </div>
-                <div class="star">
-                    <i class="star-empty"></i>
-                    <i class="star-half"></i>
-                    <i class="star-filled"></i>
-                </div>
-                <div class="star">
-                    <i class="star-empty"></i>
-                    <i class="star-half"></i>
-                    <i class="star-filled"></i>
-                </div>
-            </div>
-        </div>
+    <div class="result-info d-flex align-items-end"> 
+      <h1><strong><%= @result.name %></strong></h1>
+      <% @result.rating.to_i.times do %>
+        <span>⭐️</span>
+      <% end %>
+    </div>
     <h2> <i class="fa-li fa fa-map-marker-alt"></i> <%= @result.formatted_address %> </h2>
 
       <ul class="fa-ul">
