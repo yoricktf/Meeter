@@ -7,17 +7,20 @@
   <div class="result-info"> 
     <div class="result-info d-flex align-items-end"> 
       <h1><strong><%= @result.name %></strong></h1>
-      <% @result.rating.to_i.times do %>
-        <span>⭐️</span>
-      <% end %>
+        <% @result.rating.to_i.times do %>
+          <span>⭐️</span>
+        <% end %>
     </div>
     <h2> <i class="fa-li fa fa-map-marker-alt"></i> <%= @result.formatted_address %> </h2>
 
       <ul class="fa-ul">
-        <li> </li>
-        <li> </li>
-        <li><i class="fa-li fa fa-phone-alt"></i> <%= @result.international_phone_number %> </li>
-        <li><i class="fa-li fa fa-globe-europe"></i> <%= @result.website %> </li>
+        <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number %> </a> </li>
+        <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website %> </a> </li>
+        <li><i class="fa-li fa fa-euro-sign"> </i> 
+          <% @result.price_level.times do %>
+            <span style="font-size: 1.2rem;">💵</span>
+          <% end %>
+        </li>
       </ul>
 
   </div>
@@ -27,7 +30,7 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <div class="page-buttons">
+  <div class="page-buttons d-flex justify-items-center">
     <a href="<%=params[:url] %>" class="my-button" id="back-button" >Back</a>
     <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
   </div>
