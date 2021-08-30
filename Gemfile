@@ -30,13 +30,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'social-share-button'
 gem 'shareable'
+gem 'swiper-rails'
 
 gem 'google_places', '~> 0.32.0'
 gem 'geocoder'
-gem 'geokit'
-gem 'geokit-rails'
-
-
 
 gem 'devise'
 gem 'httparty', '~> 0.13.1'

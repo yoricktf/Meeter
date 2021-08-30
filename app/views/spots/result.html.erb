@@ -5,10 +5,10 @@
   <div class="result-info"> 
     <h1><strong><%= @result.name %></strong></h1>
     <br>
-    <p>Address: <%= @result.formatted_address %> </p>
-    <p>Rating: <%= @result.rating %>/5 </p>
-    <p>Telephone: <%= @result.international_phone_number %> </p>  
-    <p>Website: <%= @result.website %> </p>
+    <p><i class="fas fa-map-marker-alt"></i> <%= @result.formatted_address %> </p>
+    <p><i class="fas fa-star"></i> <%= @result.rating %>/5 </p>
+    <p> <i class="fas fa-phone-alt"></i> <%= @result.international_phone_number %> </p>  
+    <p><i class="fas fa-globe-europe"></i> <%= @result.website %> </p>
   </div>
 
 
