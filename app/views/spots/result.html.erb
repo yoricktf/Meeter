@@ -1,27 +1,30 @@
-<div class="container" style='width: 100%; padding: 0;'>
-  <img src="<%= @url %>" alt="spot photo" style='width: 100%;'> 
-  <br>
-
-  <div class="result-info"> 
-    <h1><strong><%= @result.name %></strong></h1>
-    <br>
-    <p><i class="fas fa-map-marker-alt"></i> <%= @result.formatted_address %> </p>
-    <p><i class="fas fa-star"></i> <%= @result.rating %>/5 </p>
-    <p> <i class="fas fa-phone-alt"></i> <%= @result.international_phone_number %> </p>  
-    <p><i class="fas fa-globe-europe"></i> <%= @result.website %> </p>
+<div class="container">
+  
+  <div>
+    <img src="<%= @url %>" alt="spot photo"> 
   </div>
 
+  <div class="result-info"> 
+    <h1><strong><%= @result.name %></strong> <i class="fa-li fa fa-star"></i> <%= @result.rating %>/5 </h1>
+    <h2> <i class="fa-li fa fa-map-marker-alt"></i> <%= @result.formatted_address %> </h2>
+
+      <ul class="fa-ul">
+        <li> </li>
+        <li> </li>
+        <li><i class="fa-li fa fa-phone-alt"></i> <%= @result.international_phone_number %> </li>
+        <li><i class="fa-li fa fa-globe-europe"></i> <%= @result.website %> </li>
+      </ul>
+
+  </div>
 
   <div id="map"
-    style="width: 100%; height: 600px;"
     data-markers="<%= @marker.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 
-  <br>
-  <br>
-
-  <a href="<%=params[:url] %>" class="my-button" >Back</a>
-  <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+  <div class="page-buttons">
+    <a href="<%=params[:url] %>" class="my-button" >Back</a>
+    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+  </div>
 
 </div>
