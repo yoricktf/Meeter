@@ -30,3 +30,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-decoration: none;
 }
+
+.mapboxgl-ctrl-geocoder--input,
+.mapboxgl-ctrl-geocoder--icon,
+.mapboxgl-ctrl-geocoder--icon-search,
+.mapboxgl-ctrl-logo,
+.mapboxgl-ctrl-attrib-button {
+  display: none;
+}

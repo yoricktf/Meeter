@@ -4,6 +4,8 @@ import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 
 
 
+
+
 const initMapbox = () => {
   const mapElement = document.getElementById('map');
 
@@ -40,13 +42,6 @@ const initMapbox = () => {
 
 
 
-
-
-
-// // [...]
-// if (mapElement) {
-//   // [...]
-// }
 
 
 export { initMapbox };
