@@ -7,7 +7,9 @@
   <div class="result-info"> 
     <div class="result-info"> 
 
+
       <h1><strong><%= @result.name %></strong></h1>
+
         <% @result.rating.to_i.times do %>
           <span>⭐️</span>
         <% end %>
@@ -25,6 +27,15 @@
           <%= "--" %>
         <% end %>
         </li>
+
+        <li><i class="fa-li fa fa-clock"> </i>
+          <%if @result.opening_hours["open_now"] %>
+            <p>OPEN NOW</p>
+          <%else%>
+            <p>CLOSED</p>
+          <%end%>
+        </li>
+
       </ul>
 
   </div>
