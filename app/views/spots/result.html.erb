@@ -4,8 +4,8 @@
 <div class="main-container">
 
 
-  <div class="result-info"> 
-    <div class="result-info"> 
+  <div class="result-info">
+    <div class="result-info">
 
 
       <h1><strong><%= @result.name %></strong></h1>
@@ -18,7 +18,7 @@
       <ul class="fa-ul">
         <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number.present? ? @result.international_phone_number : "--" %> </a> </li>
         <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website.present? ? @result.website : "--" %> </a> </li>
-        <li><i class="fa-li fa fa-euro-sign"> </i> 
+        <li><i class="fa-li fa fa-euro-sign"> </i>
         <% if @result.price_level.present? %>
           <% @result.price_level.times do %>
             <span style="font-size: 1.2rem;">💵</span>
@@ -46,8 +46,8 @@
   </div>
 
   <div class="page-buttons d-flex justify-items-center">
-    <a href="<%=params[:url] %>" class="my-button" id="back-button" >Back</a>
-    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+    <a href="<%=params[:url] %>" class="my-button button-50-width" id="back-button" >Back</a>
+    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button button-50-width"%>
   </div>
 
 </div>
