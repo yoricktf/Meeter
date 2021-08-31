@@ -1,11 +1,11 @@
 <div>
-  <img class='img-show' src="<%= @url %>" alt="spot photo"> 
+  <img class='img-show' src="<%= @url %>" alt="spot photo">
 </div>
 <div class="main-container">
-  
 
-  <div class="result-info"> 
-    <div class="result-info d-flex align-items-end"> 
+
+  <div class="result-info">
+    <div class="result-info d-flex align-items-end">
       <h1><strong><%= @result.name %></strong></h1>
         <% @result.rating.to_i.times do %>
           <span>⭐️</span>
@@ -16,7 +16,7 @@
       <ul class="fa-ul">
         <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number %> </a> </li>
         <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website %> </a> </li>
-        <li><i class="fa-li fa fa-euro-sign"> </i> 
+        <li><i class="fa-li fa fa-euro-sign"> </i>
           <% @result.price_level.times do %>
             <span style="font-size: 1.2rem;">💵</span>
           <% end %>
@@ -25,7 +25,7 @@
 
   </div>
 
-  <div id="map"
+  <div id="map" class="result-map"
     data-markers="<%= @marker.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
