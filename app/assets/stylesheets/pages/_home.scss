@@ -11,7 +11,7 @@
   padding: 10px 0;
     input {
       margin:  1em 0;
-      width: 94%;
+      // width: 94%;
     }
 
     select {
@@ -30,3 +30,47 @@
   margin: 0;
 }
 
+// .hide-checkbox {
+//   position: absolute;
+//   transform: scale(0);
+// }
+
+// .hide-checkbox:checked + label {
+//   background-color: darkslategrey !important;
+// }
+
+// .hide-checkbox + label {
+//   display: block;
+//   cursor: pointer;
+//   box-sizing: border-box;
+
+//   font-size: 12px;
+//   text-align: left;
+//   padding: 10px 10px 30px 10px;
+//   border: 1px solid #EAEAEA;
+//   border-radius: 4px;
+//   background-color: white;
+// }
+
+
+.category-selector {
+  position: absolute;
+  // transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.category-selector:checked + label {
+  color: blue !important;
+}
