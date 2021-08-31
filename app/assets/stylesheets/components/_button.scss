@@ -1,15 +1,27 @@
-  .my-button {
-    margin: 1em;
-    background-color: rgb(243, 113, 33);
-    text-decoration-color: white;
-    color: white;
-    border-radius: 5px;
-    font-weight: 700;
-    border: none;
-    padding: 1em;
-    margin: 0.5em;
+.my-button {
+  margin: 1em;
+  background-color: rgb(243, 113, 33);
+  text-decoration-color: white;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  border: none;
+  padding: 1em;
+  margin: 0.5em;
+}
 
-  }
+button {
+  margin: 1em;
+  background-color: rgb(243, 113, 33);
+  text-decoration-color: white;
+  color: white;
+  border-radius: 5px;
+  font-weight: 700;
+  border: none;
+  padding: 1em;
+  margin: 0.5em;
+  font-size: 18px;
+}
 
 .mapboxgl-ctrl-geocoder--button {
   display: none;
@@ -18,18 +30,19 @@
 .button-fullwidth {
   width: 100% !important;
 }
-  .fab {
-    font-size: 3rem;
-    padding: 0.1em;
-  }
 
-  .fas {
-    font-size: 3rem;
-    padding: 0.1em;
-  }
+.fab {
+  font-size: 3rem;
+  padding: 0.1em;
+}
 
-  .far {
-    font-size: 1rem;
-    padding: 0.5em;
-    margin-top: 1em;
-  }
+.fas {
+  font-size: 3rem;
+  padding: 0.1em;
+}
+
+.far {
+  font-size: 1rem;
+  padding: 0.5em;
+  margin-top: 1em;
+}
