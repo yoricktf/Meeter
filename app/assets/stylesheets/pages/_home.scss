@@ -1,10 +1,11 @@
 .homepage-container {
-  clear: both;
-  display: grid;
+  // clear: both;
+  // display: grid;
   align-items: center;
   text-align: center;
   background-image: url("google_map.png");
-  background-repeat: no-repeat;
+  // background-repeat: no-repeat;
+  background-size: cover;
 
     input {
       margin: 1em;

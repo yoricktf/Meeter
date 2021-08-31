@@ -4,22 +4,26 @@
 <div class="main-container">
 
 
-  <div class="result-info">
-    <div class="result-info d-flex align-items-end">
+  <div class="result-info"> 
+    <div class="result-info"> 
+
       <h1><strong><%= @result.name %></strong></h1>
         <% @result.rating.to_i.times do %>
           <span>⭐️</span>
         <% end %>
     </div>
     <h2> <i class="fa-li fa fa-map-marker-alt"></i> <%= @result.formatted_address %> </h2>
-
       <ul class="fa-ul">
-        <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number %> </a> </li>
-        <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website %> </a> </li>
-        <li><i class="fa-li fa fa-euro-sign"> </i>
+        <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number.present? ? @result.international_phone_number : "--" %> </a> </li>
+        <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website.present? ? @result.website : "--" %> </a> </li>
+        <li><i class="fa-li fa fa-euro-sign"> </i> 
+        <% if @result.price_level.present? %>
           <% @result.price_level.times do %>
             <span style="font-size: 1.2rem;">💵</span>
           <% end %>
+        <% else %>
+          <%= "--" %>
+        <% end %>
         </li>
       </ul>
 
