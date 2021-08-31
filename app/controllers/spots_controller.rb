@@ -48,8 +48,9 @@ class SpotsController < ApplicationController
       {
         lat: spot.lat,
         lng: spot.lng,
-        image_url: helpers.asset_url('/Users/yorick/code/yoricktf/Meeter/app/assets/images/cafe.png')
+        image_url: helpers.asset_url("#{params[:spot_type]}.png")
       }
+
     end
   end
 
