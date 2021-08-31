@@ -1,9 +1,9 @@
 <div class="homepage-container">
 
-  
+
   <%= image_tag 'logo.png' %>
   <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
-  
+
 
   <%= form_with url: "/spots", method: :get, local: :true do |form| %>
     <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
@@ -16,7 +16,7 @@
     <%= form.label :cafe, "Cafe" %>
     <%= form.radio_button :spot_type, "restaurant" %>
     <%= form.label :restaurant, "Restaurant" %>
-    <%= form.submit "LET'S GO!!!" %>
+    <%= form.submit "LET'S GO!!!", class: "my-button" %>
   <% end %>
 
 
