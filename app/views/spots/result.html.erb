@@ -3,10 +3,13 @@
 </div>
 <div class="main-container">
 
-  <div class="result-info">
 
+  <div class="result-info">
     <div class="result-info">
+
+
       <h1><strong><%= @result.name %></strong></h1>
+
         <% @result.rating.to_i.times do %>
           <span>⭐️</span>
         <% end %>
@@ -17,31 +20,37 @@
         <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website.present? ? @result.website : "--" %> </a> </li>
         <li><i class="fa-li fa fa-euro-sign"> </i>
         <% if @result.price_level.present? %>
-          <% @result.price_level.times do %>
+        <li><% @result.price_level.times do %>
             <span style="font-size: 1.2rem;">💵</span>
           <% end %>
         <% else %>
           <%= "--" %>
-        <% end %>
-
-        <%if @result.opening_hours["open_now"]%>
-          <p>OPEN NOW</p>
-        <%else%>
-          <p>CLOSED</p>
-        <%end%>
-
-        <%= link_to "Opening Hours", "#collapseExample", data: { toggle: "collapse"}, role: "button", aria: {expanded: false, controls: "collapseExample"} %>
-        <div class="collapse" id="collapseExample">
-        <% @result.opening_hours["weekday_text"].each do |day| %>
-        <p><%= day %></p>
-        <% end %>
-        </div>
+        <% end %> </li>
+        <li><i class="fa-li fa fa-clock"> </i>
+          <% if @result.opening_hours["open_now"] %>
+            <p>OPEN NOW</p>
+          <%else%>
+            <p>CLOSED</p>
+          <%end%>
         </li>
+
+        <li><i class="far fa-calendar"></i>
+          <%= link_to "Opening Hours ↓", "#collapseExample", data: { toggle: "collapse"}, role: "button", aria: {expanded: false, controls: "collapseExample"} %>
+          <div class="collapse" id="collapseExample">
+          <% @result.opening_hours["weekday_text"].each do |day| %>
+          <p><%= day %></p>
+          <% end %>
+        </li>
+        </div>
+
+
+
+
       </ul>
 
   </div>
 
-  <div id="map"
+  <div id="map" class="result-map"
     data-markers="<%= @marker.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>

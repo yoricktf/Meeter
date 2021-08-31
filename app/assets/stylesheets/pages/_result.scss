@@ -15,7 +15,7 @@ h2 {
 }
 
 .main-container {
-  width: 100%; 
+  width: 100%;
   padding: 0 1rem;
 }
 
@@ -26,21 +26,24 @@ h2 {
   border-radius: 0 0 16px 16px;
 }
 
-.mapboxgl-control-container {
+// .mapboxgl-control-container {
+//   height: 200px;
+// }
+
+.result-map {
   height: 200px;
-}
-
-#map {
-  height: 200px !important;
-}
-
-canvas.mapboxgl-canvas {
-  width: 100% !important; 
-  height: 200px !important;
-  object-fit: cover;
   border-radius: 10px;
   margin-top: 1rem;
+  object-fit: cover;
 }
+
+// canvas.mapboxgl-canvas {
+//   width: 100% !important;
+//   height: 200px !important;
+//   object-fit: cover;
+//   border-radius: 10px;
+//   margin-top: 1rem;
+// }
 
 .result-info {
   margin-top: 1rem;
@@ -50,10 +53,10 @@ canvas.mapboxgl-canvas {
   margin-top: 50px;
 }
 
-ul { 
-  margin-left: 0; 
-  padding-left: 0; 
-} 
+ul {
+  margin-left: 0;
+  padding-left: 0;
+}
 
 #back-button {
   color: #F37121;
