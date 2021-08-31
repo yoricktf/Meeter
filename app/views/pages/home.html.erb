@@ -1,23 +1,9 @@
 <div class="homepage-container">
+
   
   <%= image_tag 'logo.png' %>
   <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
   
-
-  <%# <form action="/spots" name="spot_type"  method="get">
-  <input class="address" required="true" type="text" name="first_address" placeholder="your location">
-   <input class="address" required="true" type="text" name="second_address"placeholder="your friend's location">
-
-    <input type="checkbox" id="park" value="park"> 
-      <label for="park">Park</label>
-    <input type="checkbox" id="bar" value="bar">
-      <label for="bar">Bar</label>
-    <input type="checkbox" id="restaurant" value="restaurant">
-      <label for="restaurant">Restaurant</label>
-    <input type="checkbox" id="cafe" value="cafe">
-      <label for="cafe">Cafe</label>
-    <input type="submit" value="LET'S GO!!!" method="get">
-  </form>    %>
 
   <%= form_with url: "/spots", method: :get, local: :true do |form| %>
     <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
@@ -33,5 +19,6 @@
     <%= form.submit "LET'S GO!!!" %>
   <% end %>
 
+
+
 </div>
-<%# multiple size="4" %>

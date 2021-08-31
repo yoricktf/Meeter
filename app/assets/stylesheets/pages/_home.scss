@@ -3,16 +3,20 @@
   // display: grid;
   align-items: center;
   text-align: center;
-  background-image: url("google_map.png");
+  background-image: asset-url("google_map.png");
   // background-repeat: no-repeat;
   background-size: cover;
-
+  height: 100vh;
+  width: 100vw;
+  padding: 10px 0;
     input {
-      margin: 1em;
+      margin:  1em 0;
+      width: 94%;
     }
 
     select {
-      margin: 1em;
+      margin: 1em 0;
+      padding: 0 5px;
     }
 }
 
@@ -21,12 +25,8 @@
   font-size: 25px;
 }
 
-// .address {
-//   position: absolute;
-//   transform: scale(0);
-// }
 
-// .address + label {
-//   cursor: pointer;
-//   // button look
-// }
+.addresses {
+  margin: 0;
+}
+

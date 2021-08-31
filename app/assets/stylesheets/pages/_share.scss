@@ -1,20 +1,8 @@
-// .my-button{
-//    margin: 1em;
-//    background-color: rgb(243, 113, 33);
-//    text-decoration-color: white;
-//    color: white;
-//    border-radius: 5px;
-//    font-weight: 700;
-//    border: none;
-//    padding: 1em;
-//    margin: 0.5em;
-//    font-size: 18px;
-// }
-
 .center-share {
   width: 100%;
   height: 100vh;
-  display: grid;
+  text-align: center;
+  justify-items: center;
   justify-content: center;
   background-image: url("google_map.png");
 
@@ -26,18 +14,45 @@
   overflow: hidden;
   padding: 0.5em;
   margin-top: 1em;
+  width: 60%;
 }
 
 .card {
   border-radius: 15px;
-  text-align: center;
+  margin: auto;
   height: fit-content;
+  width: 60vh;
 }
 
 .card-body {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
   padding-bottom: 0px;
+  margin: 0 auto;
+  padding: 5px;
+  width: 60%;
 }
 
 .card-copy {
   display: flex;
+  justify-content: center;
 }
+
+.fa-whatsapp {
+color: rgb(37, 211, 102)
+}
+
+.fa-telegram{
+color: rgb(0, 136, 204)
+}
+
+.fa-copy{
+  padding-left: 2rem;
+}
+
+// @media(max-width: 992px) {
+//   .cards {
+//     margin-top: 600px;
+//   }
+// }
