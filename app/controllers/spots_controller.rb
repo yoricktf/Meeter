@@ -1,35 +1,5 @@
 class SpotsController < ApplicationController
 
-#   def index
-# # firstaddress = Geocoder.search(params[:first_address])
-#     if params[:first_address].present? && params[:second_address].present?
-
-#       @first_address = params[:first_address]
-#       @first_address = Geocoder.search(params[:first_address])
-#       @first_address_coordinates = @first_address.first.coordinates
-
-#       @second_address = params[:second_address]
-#       @second_address = Geocoder.search(params[:second_address])
-#       @second_address_coordinates = @second_address.first.coordinates
-
-
-#       @centre_point = Geocoder::Calculations.geographic_center([@first_address_coordinates, @second_address_coordinates])
-#       @centre_point_lat = @centre_point.first
-#       @centre_point_lon = @centre_point.second
-
-#       @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
-
-#       @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => 'restaurant')
-
-#       @markers = @spots.map do |spot|
-#         {
-#           lat: spot.lat,
-#           lng: spot.lng
-#         }
-#       end
-#     end
-#   end
-
   def index
     first_address
     second_address
@@ -46,7 +16,6 @@ class SpotsController < ApplicationController
     @url = @result.photos[0].fetch_url(800)
     single_marker(@result)
   end
-
 
   private
 
@@ -77,7 +46,8 @@ class SpotsController < ApplicationController
     @markers = spots.map do |spot|
       {
         lat: spot.lat,
-        lng: spot.lng
+        lng: spot.lng,
+        image_url: helpers.asset_url('/Users/yorick/code/yoricktf/Meeter/app/assets/images/cafe.png')
       }
     end
   end
@@ -87,6 +57,7 @@ class SpotsController < ApplicationController
       {
         lat: result.lat,
         lng: result.lng
-      }]
+      }
+    ]
   end
 end
