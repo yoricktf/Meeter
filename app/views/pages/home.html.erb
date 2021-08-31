@@ -1,39 +1,24 @@
 <div class="homepage-container">
 
 
-  <%# <div class="meeter-header"> %>
-    <%= image_tag 'logo.png' %>
-    <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
-  <%# </div> %>
+  <%= image_tag 'logo.png' %>
+  <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
 
-  <%# <div class="homepage-input-fields-and-search-button"> %>
-    <form action="/spots" method="get">
 
-      <div class="addresses">
-        <div class="address1">
-          <input class="address" required="true" type="text" name="first_address" placeholder="your location">
-        </div>
-        <div class="address2">
-          <input class="address" required="true" type="text" name="second_address"placeholder="your friend's location">
-        </div>
-      </div>
+  <%= form_with url: "/spots", method: :get, local: :true do |form| %>
+    <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
+    <%= form.text_field :second_address, placeholder: "your friend's location", class: "address" %>
+    <%= form.radio_button :spot_type, "park"%>
+    <%= form.label :park, "Park" %>
+    <%= form.radio_button :spot_type, "bar" %>
+    <%= form.label :bar, "Bar" %>
+    <%= form.radio_button :spot_type, "cafe" %>
+    <%= form.label :cafe, "Cafe" %>
+    <%= form.radio_button :spot_type, "restaurant" %>
+    <%= form.label :restaurant, "Restaurant" %>
+    <%= form.submit "LET'S GO!!!", class: "my-button" %>
+  <% end %>
 
-      <div class="spot-type-form">
-        <select name="spot_type" multiple size="5">
-            <option value="park">Park</option>
-            <option value="bar">Bar </option>
-            <option value="cafe">Cafe </option>
-            <option value="night_club">Club </option>
-            <option value="restaurant">Restaurant </option>
-        </select>
-      </div>
-
-      <div class="my-button">
-        <button type="submit">LET'S GO!!!</button>
-      </div>
-
-    </form>
-  <%# </div> %>
 
 
 </div>

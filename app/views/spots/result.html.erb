@@ -28,20 +28,20 @@
         <% end %> </li>
         <li><i class="fa-li fa fa-clock"> </i>
           <% if @result.opening_hours["open_now"] %>
-            <p>OPEN NOW</p>
+            <h6>OPEN NOW</h6>
           <%else%>
-            <p>CLOSED</p>
+            <h6>CURRENTLY CLOSED</h6>
           <%end%>
         </li>
 
-        <li><i class="far fa-calendar"></i>
-          <%= link_to "Opening Hours ↓", "#collapseExample", data: { toggle: "collapse"}, role: "button", aria: {expanded: false, controls: "collapseExample"} %>
+        <li><i class="fa-li fa fa-calendar"> </i>
+          <%= link_to "Business Hours ↓", "#collapseExample", data: { toggle: "collapse"}, role: "button", aria: {expanded: false, controls: "collapseExample"} %>
           <div class="collapse" id="collapseExample">
           <% @result.opening_hours["weekday_text"].each do |day| %>
           <p><%= day %></p>
           <% end %>
-        </li>
         </div>
+        </li>
 
 
 
@@ -56,8 +56,8 @@
   </div>
 
   <div class="page-buttons d-flex justify-items-center">
-    <a href="<%=params[:url] %>" class="my-button" id="back-button" >Back</a>
-    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+    <a href="<%=params[:url] %>" class="my-button button-50-width" id="back-button" >Back</a>
+    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button button-50-width"%>
   </div>
 
 </div>
