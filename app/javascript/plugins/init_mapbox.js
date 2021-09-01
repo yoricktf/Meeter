@@ -36,7 +36,7 @@ const initMapbox = () => {
 
       new mapboxgl.Marker(element)
         .setLngLat([marker.lng, marker.lat])
-        .setPopup(popup)
+        //  .setPopup(popup)
         .addTo(map);
       });
       map.addControl(new MapboxGeocoder({

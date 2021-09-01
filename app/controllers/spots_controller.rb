@@ -58,7 +58,8 @@ class SpotsController < ApplicationController
     @marker = [
       {
         lat: result.lat,
-        lng: result.lng
+        lng: result.lng,
+        image_url: helpers.asset_url("#{params[:spot_type]}.png")
       }
     ]
   end

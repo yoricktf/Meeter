@@ -5,7 +5,7 @@
   <div class="scrolling-wrapper">
     <% @spots.each do |spot| %>
       <div class="card-category horizontal-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= spot.photos.any? ? spot.photos[0].fetch_url(500) : "https://picsum.photos/id/1060/600/900" %>)">
-        <%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url) %>
+        <%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url, spot_type: params[:spot_type]) %>
       </div>
     <% end %>
   </div>
