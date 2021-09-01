@@ -1,11 +1,18 @@
+<!-- app/views/offers/show.html.erb -->
+<% content_for :meta_title, "#{@result.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @result.description %>
+<% content_for :meta_image, cl_image_path(@offer.photo.path) %>
+
+
+
 <div>
   <img class='img-show' src="<%= @url %>" alt="spot photo">
 </div>
 <div class="main-container">
 
 
-  <div class="result-info"> 
-    <div class="result-info"> 
+  <div class="result-info">
+    <div class="result-info">
 
 
       <h1><strong><%= @result.name %></strong></h1>
@@ -18,23 +25,33 @@
       <ul class="fa-ul">
         <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number.present? ? @result.international_phone_number : "--" %> </a> </li>
         <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website.present? ? @result.website : "--" %> </a> </li>
-        <li><i class="fa-li fa fa-euro-sign"> </i> 
+        <li><i class="fa-li fa fa-euro-sign"> </i>
         <% if @result.price_level.present? %>
-          <% @result.price_level.times do %>
+        <li><% @result.price_level.times do %>
             <span style="font-size: 1.2rem;">💵</span>
           <% end %>
         <% else %>
           <%= "--" %>
-        <% end %>
-        </li>
-
+        <% end %> </li>
         <li><i class="fa-li fa fa-clock"> </i>
-          <%if @result.opening_hours["open_now"] %>
-            <p>OPEN NOW</p>
+          <% if @result.opening_hours["open_now"] %>
+            <h6>OPEN NOW</h6>
           <%else%>
-            <p>CLOSED</p>
+            <h6>CURRENTLY CLOSED</h6>
           <%end%>
         </li>
+
+        <li><i class="fa-li fa fa-calendar"> </i>
+          <%= link_to "Business Hours ↓", "#collapseExample", data: { toggle: "collapse"}, role: "button", aria: {expanded: false, controls: "collapseExample"} %>
+          <div class="collapse" id="collapseExample">
+          <% @result.opening_hours["weekday_text"].each do |day| %>
+          <p><%= day %></p>
+          <% end %>
+        </div>
+        </li>
+
+
+
 
       </ul>
 
@@ -46,8 +63,8 @@
   </div>
 
   <div class="page-buttons d-flex justify-items-center">
-    <a href="<%=params[:url] %>" class="my-button" id="back-button" >Back</a>
-    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button"%>
+    <a href="<%=params[:url] %>" class="my-button button-50-width" id="back-button" >Back</a>
+    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button button-50-width"%>
   </div>
 
 </div>

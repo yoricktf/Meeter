@@ -1,6 +1,7 @@
 class SpotsController < ApplicationController
 
   def index
+
     first_address
     second_address
     center_point
@@ -38,7 +39,7 @@ class SpotsController < ApplicationController
   end
 
   def marked_results
-    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => "#{params[:spot_type]}", :radius => 400)
+    @spots = @client.spots(@centre_point_lat, @centre_point_lon, :types => params[:spot_type].downcase, :radius => 1000)
     @spots = @spots.take(3)
   end
 
@@ -47,8 +48,9 @@ class SpotsController < ApplicationController
       {
         lat: spot.lat,
         lng: spot.lng,
-        image_url: helpers.asset_url('/Users/yorick/code/yoricktf/Meeter/app/assets/images/cafe.png')
+        image_url: helpers.asset_url("#{params[:spot_type]}.png")
       }
+
     end
   end
 
