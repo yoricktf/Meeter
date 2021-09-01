@@ -1,24 +1,33 @@
-<div class="homepage-container">
+<head>
+  Meet up with your friends without going a meter too far.
+  <%= favicon_link_tag '/favicon.ico'%>
+</head>
+
+<body>
+
+  <div class="homepage-container">
 
 
-  <%= image_tag 'logo.png' %>
-  <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
+    <%= image_tag 'logo.png' %>
+    <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
 
 
-  <%= form_with url: "/spots", method: :get, local: :true do |form| %>
-    <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
-    <%= form.text_field :second_address, placeholder: "your friend's location", class: "address" %>
-    <%= form.radio_button :spot_type, "park"%>
-    <%= form.label :park, "Park" %>
-    <%= form.radio_button :spot_type, "bar" %>
-    <%= form.label :bar, "Bar" %>
-    <%= form.radio_button :spot_type, "cafe" %>
-    <%= form.label :cafe, "Cafe" %>
-    <%= form.radio_button :spot_type, "restaurant" %>
-    <%= form.label :restaurant, "Restaurant" %>
-    <%= form.submit "LET'S GO!!!", class: "my-button" %>
-  <% end %>
+    <%= form_with url: "/spots", method: :get, local: :true do |form| %>
+      <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
+      <%= form.text_field :second_address, placeholder: "your friend's location", class: "address" %>
+      <%= form.radio_button :spot_type, "park"%>
+      <%= form.label :park, "Park" %>
+      <%= form.radio_button :spot_type, "bar" %>
+      <%= form.label :bar, "Bar" %>
+      <%= form.radio_button :spot_type, "cafe" %>
+      <%= form.label :cafe, "Cafe" %>
+      <%= form.radio_button :spot_type, "restaurant" %>
+      <%= form.label :restaurant, "Restaurant" %>
+      <%= form.submit "LET'S GO!!!", class: "my-button" %>
+    <% end %>
 
 
 
-</div>
+  </div>
+
+</body>
