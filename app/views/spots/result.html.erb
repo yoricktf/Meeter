@@ -1,3 +1,10 @@
+<!-- app/views/result/show.html.erb -->
+<% content_for :meta_title, @result.name %>
+<% content_for :meta_description, @result.website %>
+<% content_for :meta_image, image_path("bar.png") %>
+
+
+
 <div>
   <img class='img-show' src="<%= @url %>" alt="spot photo">
 </div>

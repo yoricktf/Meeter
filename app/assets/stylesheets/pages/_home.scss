@@ -1,23 +1,21 @@
 .homepage-container {
-  // clear: both;
-  // display: grid;
-  align-items: center;
   text-align: center;
   background-image: asset-url("google_map.png");
-  // background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
   padding: 10px 0;
-    input {
-      margin:  1em 0;
-      width: 94%;
-    }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  input {
+    margin:  1em 0;
+  }
 
-    select {
-      margin: 1em 0;
-      padding: 0 5px;
-    }
+  select {
+    margin: 1em 0;
+    padding: 0 5px;
+  }
 }
 
 .meeter-tagline {
@@ -25,8 +23,97 @@
   font-size: 25px;
 }
 
-
 .addresses {
   margin: 0;
 }
 
+#second-address {
+  margin-top: 0;
+}
+
+.home-button {
+  width: 100%;
+  padding: .25rem;
+  margin: 0;
+}
+
+.category-wrapper {
+  margin-top: 1em;
+}
+
+.category-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.category-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 18px;
+  text-align: left;
+  text-align: center;
+  margin-bottom: 0px;
+  flex: 0 0 48%;
+  letter-spacing: 1px;
+  color: #000000b3;
+  opacity: .8;
+}
+
+.category-item {
+  border: 1px solid #EAEAEA;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#spot_type_park:checked + label > .park {
+  background-color: #53BC77ff;
+  color: black;
+  border: 1px solid black;
+}
+
+#spot_type_cafe:checked + label > .cafe {
+  background-color: #45AFA2ff;
+  color: black;
+  border: 1px solid black;
+
+}
+
+#spot_type_bar:checked + label > .bar {
+  background-color: #F78E3Dff;
+  color: black;
+  border: 1px solid black;
+
+}
+
+#spot_type_restaurant:checked + label > .restaurant {
+  background-color: #F7C92Bff;
+  color: black;
+  border: 1px solid black;
+
+}
+
+.park {
+  background: #66D15Fff;
+  // --emerald: #53BC77ff;
+}
+
+.bar {
+  background: #F7AA55ff;
+  // --cadmium-orange: #F78E3Dff;
+}
+
+.cafe {
+  background: #4DCABDff;
+  // --keppel: #45AFA2ff;
+}
+
+.restaurant {
+  background: #F7E249ff;
+  // --jonquil: #F7C92Bff;
+}
