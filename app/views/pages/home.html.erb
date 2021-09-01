@@ -2,31 +2,49 @@
   <%= favicon_link_tag '/favicon.ico'%>
 </head>
 
-<body>
 
-  <div class="homepage-container">
-
-
+  <div class="logo-info-wrapper">
     <%= image_tag 'logo.png' %>
     <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
+  </div>
 
-
+  <div class="form-wrapper px-4">
     <%= form_with url: "/spots", method: :get, local: :true do |form| %>
       <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
       <%= form.text_field :second_address, placeholder: "your friend's location", class: "address" %>
-      <%= form.radio_button :spot_type, "park"%>
-      <%= form.label :park, "Park" %>
-      <%= form.radio_button :spot_type, "bar" %>
-      <%= form.label :bar, "Bar" %>
-      <%= form.radio_button :spot_type, "cafe" %>
-      <%= form.label :cafe, "Cafe" %>
-      <%= form.radio_button :spot_type, "restaurant" %>
-      <%= form.label :restaurant, "Restaurant" %>
-      <%= form.submit "LET'S GO!!!", class: "my-button" %>
+      <div class="category-wrapper d-flex flex-wrap justify-content-between">
+          <%= form.radio_button :spot_type, "park", class: "category-selector" %>
+            <%= form.label :spot_type_park do %>
+              <div class="category-item park">
+                <%= image_tag 'park.png', width: "40" %>
+                Park
+              </div>
+            <% end %>
+          <%= form.radio_button :spot_type, "bar", class: "category-selector" %>
+          <%= form.label :spot_type_bar do %>
+            <div class="category-item bar">
+              <%= image_tag 'bar.png', width: "40" %>
+              Bar
+            </div>
+          <% end %>
+
+          <%= form.radio_button :spot_type, "cafe", class: "category-selector" %>
+          <%= form.label :spot_type_cafe do %>
+            <div class="category-item cafe mt-2">
+              <%= image_tag 'cafe.png', width: "40" %>
+              Cafe
+            </div>
+          <% end %>
+          <%= form.radio_button :spot_type, "restaurant", class: "category-selector" %>
+          <%= form.label :spot_type_restaurant do %>
+            <div class="category-item restaurant mt-2">
+              <%= image_tag 'restaurant.png', width: "40" %>
+              Restaurant
+            </div>
+          <% end %>
+      </div>
+      <%= form.submit "LET'S GO!!!", class: "my-button home-button" %>
     <% end %>
-
-
-
   </div>
+</div>
 
-</body>

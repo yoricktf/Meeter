@@ -1,7 +1,6 @@
 class SpotsController < ApplicationController
 
   def index
-
     first_address
     second_address
     center_point
