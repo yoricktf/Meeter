@@ -20,21 +20,31 @@
         <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website.present? ? @result.website : "--" %> </a> </li>
         <li><i class="fa-li fa fa-euro-sign"> </i>
         <% if @result.price_level.present? %>
-          <% @result.price_level.times do %>
+        <li><% @result.price_level.times do %>
             <span style="font-size: 1.2rem;">💵</span>
           <% end %>
         <% else %>
           <%= "--" %>
-        <% end %>
-        </li>
-
+        <% end %> </li>
         <li><i class="fa-li fa fa-clock"> </i>
-          <%if @result.opening_hours["open_now"] %>
-            <p>OPEN NOW</p>
+          <% if @result.opening_hours["open_now"] %>
+            <h6>OPEN NOW</h6>
           <%else%>
-            <p>CLOSED</p>
+            <h6>CURRENTLY CLOSED</h6>
           <%end%>
         </li>
+
+        <li><i class="fa-li fa fa-calendar"> </i>
+          <%= link_to "Business Hours ↓", "#collapseExample", data: { toggle: "collapse"}, role: "button", aria: {expanded: false, controls: "collapseExample"} %>
+          <div class="collapse" id="collapseExample">
+          <% @result.opening_hours["weekday_text"].each do |day| %>
+          <p><%= day %></p>
+          <% end %>
+        </div>
+        </li>
+
+
+
 
       </ul>
 
