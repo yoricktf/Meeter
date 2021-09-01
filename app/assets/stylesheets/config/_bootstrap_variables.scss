@@ -23,3 +23,6 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+h1, h2, h3, h4, h5, h6, p, label, input, a {
+    letter-spacing: 1px;
+}
