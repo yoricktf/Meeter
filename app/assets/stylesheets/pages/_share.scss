@@ -8,6 +8,10 @@
 
 }
 
+#logo-share {
+  margin-bottom: 5em;
+}
+
 #share-link {
   background-color: rgb(196, 196, 196);
   white-space: nowrap;
@@ -19,9 +23,14 @@
 
 .card {
   border-radius: 15px;
-  // margin: auto;
+  margin: auto;
   height: fit-content;
-  // width: 60vh;
+  width: 90%;
+}
+
+.card-title {
+  margin-bottom: 0.75rem;
+  margin-top: 1em;
 }
 
 .card-body {
@@ -51,8 +60,10 @@ color: rgb(0, 136, 204)
   padding-left: 2rem;
 }
 
-// @media(max-width: 992px) {
-//   .cards {
-//     margin-top: 600px;
-//   }
-// }
+$breakpoint-tablet: 768px;
+
+@media (min-width: $breakpoint-tablet) {
+  .card {
+    width: 650px;
+  }
+}
