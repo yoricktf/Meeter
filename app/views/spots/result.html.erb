@@ -20,19 +20,21 @@
     <ul class="fa-ul">
       <li><i class="fa-li fa fa-phone-alt"></i> <a href="tel:<%= @result.international_phone_number %>" class="go-to-website"> <%= @result.international_phone_number.present? ? @result.international_phone_number : "--" %> </a> </li>
       <li><i class="fa-li fa fa-globe-europe"></i> <a href="<%= @result.website %>" class="go-to-website"> <%= @result.website.present? ? @result.website : "--" %> </a> </li>
-      <li><i class="fa-li fa fa-euro-sign"> </i>
-      <% if @result.price_level.present? %>
-      <li><% @result.price_level.times do %>
-          <span style="font-size: 1.2rem;">💵</span>
-        <% end %>
-      <% else %>
-        <%= "--" %>
-      <% end %> </li>
+      <li>
+        <i class="fa-li fa fa-euro-sign"> </i>
+        <% if @result.price_level.present? %>
+        <% @result.price_level.times do %>
+            <span style="font-size: 1.2rem;">💵</span>
+          <% end %>
+        <% else %>
+          <%= "--" %>
+        <% end %> 
+      </li>
       <li><i class="fa-li fa fa-clock"> </i>
         <% if @result.opening_hours["open_now"] %>
-          <h6>OPEN NOW</h6>
+          Open now
         <%else%>
-          <h6>CURRENTLY CLOSED</h6>
+          Currently closed
         <%end%>
       </li>
 
