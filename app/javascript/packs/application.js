@@ -31,12 +31,14 @@ import 'bootstrap';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { buttonClick } from '../plugins/user_location';
+import { buttonCopy } from '../plugins/text_copier';
 
 
 document.addEventListener('turbolinks:load', () => {
   setTimeout(initMapbox, 100);
   initAutocomplete();
   buttonClick()
+  buttonCopy();
 })
 
 // document.addEventListener('turbolinks:load', () => {

@@ -4,12 +4,15 @@
 <div class="index-content">
   <div class="scrolling-wrapper">
     <% @spots.each do |spot| %>
+    <%= link_to result_path(place_id: spot.place_id, url: request.url, spot_type: params[:spot_type]) do%>
+
       <div class="card-category horizontal-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= spot.photos.any? ? spot.photos[0].fetch_url(500) : "https://picsum.photos/id/1060/600/900" %>)">
 
 
         <div class="card-info">
-          <h1>
-             <%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url, spot_type: params[:spot_type]) %>
+          <h1><%= spot.name %>
+
+             <%# <%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url, spot_type: params[:spot_type]) %>
 <!--             <%= link_to spot.name, result_path(place_id: spot.place_id, url: request.url) %> -->
           </h1>
 
@@ -17,7 +20,9 @@
             <span>⭐️</span>
           <% end %>
 
-          <% if spot.opening_hours["open_now"] %>
+          <% if spot.opening_hours.nil? %>
+            <h6>CHECK WEBSITE FOR OPENING HOURS</h6>
+            <% elsif spot.opening_hours["open_now"] %>
             <h6>OPEN NOW</h6>
           <%else%>
             <h6>CURRENTLY CLOSED</h6>
@@ -25,6 +30,7 @@
         </div>
 
       </div>
+      <% end %>
     <% end %>
   </div>
 

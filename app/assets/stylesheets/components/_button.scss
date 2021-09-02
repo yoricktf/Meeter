@@ -11,8 +11,14 @@
   font-size: 20px;
 }
 
+.my-button:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .button-fullwidth {
   width: 94% ;
+  font-family: "Bebas Neue"
 }
 
 .button-50-width {
@@ -26,8 +32,8 @@
 
 .share-button {
   position: absolute;
-bottom: 0;
-left: 3px;
+  bottom: 0;
+  left: 3px;
 }
 
 // .page-buttons {

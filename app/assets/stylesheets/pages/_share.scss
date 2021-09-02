@@ -4,12 +4,11 @@
   text-align: center;
   justify-items: center;
   justify-content: center;
-  background-image: url("google_map.png");
-
+  background-image: asset-url("google_map.png");
 }
 
 #logo-share {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 
 #share-link {
@@ -19,6 +18,10 @@
   padding: 0.5em;
   margin-top: 1em;
   width: 60%;
+}
+
+#myInput {
+  display: none;
 }
 
 .card {
