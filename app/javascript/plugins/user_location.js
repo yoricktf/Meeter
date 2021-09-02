@@ -16,7 +16,7 @@ function showPosition(position) {
 
 
 function buttonClick(){
-  const searchButton =  document.querySelector(".something");
+  const searchButton =  document.querySelector(".location-btn");
   if (searchButton) {
     searchButton.addEventListener("click", () =>  {
       getLocation()

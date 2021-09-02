@@ -18,6 +18,16 @@
   }
 }
 
+.location-btn{
+  border: 0;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 16px;
+  outline: none;
+}
+
 .meeter-tagline {
   color: rgb(86, 80, 80);
   font-size: 25px;

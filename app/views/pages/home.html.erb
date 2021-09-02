@@ -5,7 +5,7 @@
     <%= image_tag 'logo.png' %>
     <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
   </div>
-
+  <button class="location-btn">Your location</button>
   <div class="form-wrapper px-4">
     <%= form_with url: "/spots", method: :get, local: :true do |form| %>
       <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
@@ -45,6 +45,6 @@
     <% end %>
   </div>
 
-<button class="something">Your location</button>
+
 
 </div>
