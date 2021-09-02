@@ -30,26 +30,15 @@ import 'bootstrap';
 // import { initSelect2 } from '../components/init_select2';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initAutocomplete } from '../plugins/init_autocomplete';
+import { buttonClick } from '../plugins/user_location';
+
 
 document.addEventListener('turbolinks:load', () => {
   setTimeout(initMapbox, 100);
   initAutocomplete();
-  getLocation()
+  buttonClick()
 })
 
-const x = document.querySelector(".address");
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else {
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.value = position.coords.latitude + ","
-  + position.coords.longitude;
-}
 // document.addEventListener('turbolinks:load', () => {
 //   // Call your functions here, e.g:
 //   // initSelect2();
