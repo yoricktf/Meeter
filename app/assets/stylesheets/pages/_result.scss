@@ -60,13 +60,15 @@ ul {
   color: black;
 }
 
-a {
-  text-decoration: none !important;
-  color: black;
-}
-
-a:active, a:hover, a:visited {
-  color: black;
+.result-info {
+  a {
+    text-decoration: none !important;
+    color: black;
+  }
+  
+  a:active, a:hover, a:visited {
+    color: black;
+  }
 }
 
 .open-closed {
