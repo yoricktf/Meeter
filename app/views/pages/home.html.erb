@@ -5,10 +5,12 @@
     <%= image_tag 'logo.png' %>
     <h1 class="meeter-tagline">MEET UP WITH YOUR FRIENDS WITHOUT GOING A METER TOO FAR</h1>
   </div>
-
   <div class="form-wrapper px-4">
     <%= form_with url: "/spots", method: :get, local: :true do |form| %>
-      <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
+      <div class="search-field-container">
+        <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
+         <div class="location-btn"></div>
+      </div>
       <%= form.text_field :second_address, placeholder: "your friend's location", class: "address" %>
       <div class="category-wrapper d-flex flex-wrap justify-content-between">
           <%= form.radio_button :spot_type, "park", class: "category-selector" %>
@@ -44,4 +46,7 @@
       <%= form.submit "LET'S GO!!!", class: "my-button home-button" %>
     <% end %>
   </div>
+
+
+
 </div>

@@ -18,6 +18,27 @@
   }
 }
 
+.location-btn{
+  background-image: asset-url("bar.png");
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translate(0, -50%);
+  outline: none;
+  height: 25px;
+  width: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.search-field-container{
+  position: relative;
+}
+
+.ap-input-icon{
+ display: none;
+}
+
 .meeter-tagline {
   color: rgb(86, 80, 80);
   font-size: 25px;
