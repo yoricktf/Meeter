@@ -5,7 +5,6 @@
   justify-items: center;
   justify-content: center;
   background-image: url("google_map.png");
-
 }
 
 #logo-share {
@@ -19,6 +18,10 @@
   padding: 0.5em;
   margin-top: 1em;
   width: 60%;
+}
+
+#myInput {
+  display: none;
 }
 
 .card {

@@ -13,10 +13,14 @@
       <a href="mailto:?subject=Check all this spots&amp;body=Check out these spots <%= params[:url] %>"><i class="fas fa-envelope"></i></a>
       </div>
       <div class="card-copy">
-        <p id="share-link"><%=params[:url]%></p>
+        <p id="share-link"><%= params[:url]%></p>
         <p><i class="far fa-copy"></i></p>
 
     </div>
   </div>
   <a href="<%=params[:url] %>" class="my-button button-fullwidth share-button">Back</a>
 </div>
+
+
+<input type="text" value="<%= params[:url]%>" id="myInput">
+<%# <p onclick="myFunction()"><i class="far fa-copy"></i></p> %>
