@@ -6,13 +6,8 @@ i {
 
 .result-info > h1 {
   margin: 0;
-  margin-left: -16px;
 }
 
-.result-info > span {
-  // letter-spacing: normal; not working
-  margin-left: -16px;
-}
 
 h2 {
   font-size: 1.25rem;
@@ -36,6 +31,7 @@ h2 {
   object-fit: cover;
   padding: 1rem 1rem;
   border-radius: 0 0 16px 16px;
+  margin: 10px;
 }
 
 .result-info {
@@ -65,11 +61,7 @@ a {
   color: black;
 }
 
-a:active {
-  color: black;
-}
-
-a:visited {
+a:active, a:hover, a:visited {
   color: black;
 }
 
@@ -78,10 +70,5 @@ a:visited {
 }
 
 .mapboxgl-canvas {
-  margin: 10px;
   border-radius: 0 0 16px 16px;
-}
-
-.collapse {
-  line-height: 0.5rem;
 }
