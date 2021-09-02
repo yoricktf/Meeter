@@ -6,8 +6,12 @@ i {
 
 .result-info > h1 {
   margin: 0;
-  line-height: 1;
-  margin-right: 0.75rem;
+  margin-left: -16px;
+}
+
+.result-info > span {
+  // letter-spacing: normal; not working
+  margin-left: -16px;
 }
 
 h2 {
@@ -16,7 +20,6 @@ h2 {
 
 .main-container {
   width: 100%;
-  padding: 0 1rem;
 }
 
 .img-show {
@@ -26,37 +29,26 @@ h2 {
   border-radius: 0 0 16px 16px;
 }
 
-// .mapboxgl-control-container {
-//   height: 200px;
-// }
-
 .result-map {
   height: 200px;
   border-radius: 10px;
-  margin-top: 1rem;
+  margin-top: 0.8rem;
   object-fit: cover;
+  padding: 1rem 1rem;
+  border-radius: 0 0 16px 16px;
 }
-
-// canvas.mapboxgl-canvas {
-//   width: 100% !important;
-//   height: 200px !important;
-//   object-fit: cover;
-//   border-radius: 10px;
-//   margin-top: 1rem;
-// }
 
 .result-info {
-  margin-top: 1rem;
+  padding-top: 0.8rem;
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  padding-left: 16px;
 }
-
-
 
 ul {
   margin-left: 0;
   padding-left: 0;
 }
-
-
 
 .go-to-website {
   text-decoration: none;
@@ -70,10 +62,26 @@ ul {
 
 a {
   text-decoration: none !important;
+  color: black;
 }
+
+a:active {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
 .open-closed {
   margin-bottom: 0px;
 }
-.killing-me-softly {
-  margin-left: -16px;
+
+.mapboxgl-canvas {
+  margin: 10px;
+  border-radius: 0 0 16px 16px;
+}
+
+.collapse {
+  line-height: 0.5rem;
 }
