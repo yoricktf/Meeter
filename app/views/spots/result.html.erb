@@ -28,7 +28,7 @@
           <% end %>
         <% else %>
           <%= "--" %>
-        <% end %> 
+        <% end %>
       </li>
       <li><i class="fa-li fa fa-clock"> </i>
         <% if @result.opening_hours["open_now"] %>
@@ -57,7 +57,7 @@
 
   <div class="page-buttons d-flex align-items-end">
     <a href="<%=params[:url] %>" class="my-button button-50-width" id="back-button" >Back</a>
-    <%=link_to "Share", share_spots_path(url:request.url), :class => "my-button button-50-width"%>
+    <%=link_to "Share", share_spots_path(url:request.url, first_address: params[:first_address] || nil, second_address: params[:second_address] || nil), :class => "my-button button-50-width"%>
   </div>
 
 </div>

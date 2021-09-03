@@ -8,10 +8,10 @@
   <div class="form-wrapper px-4">
     <%= form_with url: "/spots", method: :get, local: :true do |form| %>
       <div class="search-field-container">
-        <%= form.text_field :first_address, placeholder: "your location", class: "address" %>
+        <%= form.text_field :first_address, placeholder: "your location", class: "address", value: params[:first_address] || "" %>
          <div class="location-btn"></div>
       </div>
-      <%= form.text_field :second_address, placeholder: "your friend's location", class: "address" %>
+      <%= form.text_field :second_address, placeholder: "your friend's location", class: "address", value: params[:second_address] || ""%>
       <div class="category-wrapper d-flex flex-wrap justify-content-between">
           <%= form.radio_button :spot_type, "park", class: "category-selector" %>
             <%= form.label :spot_type_park do %>
@@ -43,7 +43,7 @@
             </div>
           <% end %>
       </div>
-      <%= form.submit "LET'S GO!!!", class: "my-button home-button" %>
+      <%= form.submit "LET'S GO!", class: "my-button home-button" %>
     <% end %>
   </div>
 
