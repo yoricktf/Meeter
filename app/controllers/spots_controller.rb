@@ -7,6 +7,10 @@ class SpotsController < ApplicationController
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
     marked_results
     marker(@spots)
+    location_markers
+
+    # single_marker(@first_address_coordinates)
+
   end
 
   def result
@@ -61,5 +65,18 @@ class SpotsController < ApplicationController
         image_url: helpers.asset_url("#{params[:spot_type]}.png")
       }
     ]
+  end
+
+  def location_markers
+    @markers << {
+                  lat: @first_address_coordinates[0],
+                  lng: @first_address_coordinates[1],
+                  image_url: helpers.asset_url("location.png")
+                }
+    @markers << {
+                  lat: @second_address_coordinates[0],
+                  lng: @second_address_coordinates[1],
+                  image_url: helpers.asset_url("location.png")
+                }
   end
 end
