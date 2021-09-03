@@ -13,6 +13,11 @@ class SpotsController < ApplicationController
 
   end
 
+  def share
+    @first_address = params[:first_address]
+    @second_address = params[:second_address]
+  end
+
   def result
     # we cannot use show, we had to call it differently
     @client = GooglePlaces::Client.new(ENV['GOOGLE_API_KEY'])
